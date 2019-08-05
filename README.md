@@ -5,3 +5,5 @@ Unicorn Investors wants to make an investment in a new form of transportation - 
 
 - ### [Sentiment Analysis using Recurrent Neural Network](https://github.com/sksoumik/machine-learning-projects/tree/master/sentiment_analysis)
 Finding polarity(positive, negative, neutral) out of a sentence using RNN. Data set - [Twitter US Airline Sentiment](https://www.kaggle.com/crowdflower/twitter-airline-sentiment) 
+
+- ### [Google stock price prediction using RNN and LSTM](https://github.com/sksoumik/machine-learning-projects/tree/master/stock_price_prediction)
