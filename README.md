@@ -1,4 +1,4 @@
-# machine-learning-projects
+### machine learning projects
 
 - ####  [Passenger traffic forecasting for a transport company](https://github.com/sksoumik/machine-learning-projects/blob/master/Forecasting_traffic/timeseries_forecasting.ipynb)
 
