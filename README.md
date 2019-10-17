@@ -11,3 +11,7 @@
 - #### [Image reconstruction using Vanilla AutoEncoders](https://github.com/sksoumik/machine-learning-projects/blob/master/autoencoders_fashion_mnist/image_reconstruction_autoencoder.ipynb), [Image Compression using Sparse AutoEncoder](https://github.com/sksoumik/machine-learning-projects/blob/master/autoencoders_fashion_mnist/image_compression_sparse_autoencoder.ipynb) , [Image Denoising using Convolutional AutoEncoder](https://github.com/sksoumik/machine-learning-projects/blob/master/autoencoders_fashion_mnist/image_denoising_convolutional_autoencoder.ipynb)
 
 - #### [Analyzing US Economic data - GDP vs Unemployment](https://github.com/sksoumik/machine-learning-projects/tree/master/analyzing_US_economic_data)
+
+- #### [Bank Customer Satisfaction Prediction Using CNN](https://github.com/sksoumik/machine-learning-projects/tree/master/bank_customer_satisfaction_prediction_using_CNN)
+
+- #### [Object Detection Using Pretrained CNN Model](https://github.com/sksoumik/machine-learning-projects/tree/master/object_detection_using_pretrained_cnn_model)
