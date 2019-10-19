@@ -17,3 +17,6 @@
 - #### [Object Detection Using Pretrained CNN Model](https://github.com/sksoumik/machine-learning-projects/tree/master/object_detection_using_pretrained_cnn_model)
 
 - #### [Pet Breed Classification Using CNN - fastai](https://github.com/sksoumik/machine-learning-projects/blob/master/pet_breed_classification_cnn_fastai/fastai_image_classification_pets.ipynb)
+
+---
+Note: Most of the projects in this repository were done only for learning purposes following other ML experts/practitioners. Not all of the codes are mine. 
