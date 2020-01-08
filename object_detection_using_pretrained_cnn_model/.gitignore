@@ -1,0 +1,15 @@
+.idea/
+*.csv
+*.h5
+__pycache__
+__pycache__/
+.cache
+.ipynb_checkpoints
+__pypackages__/
+.env
+.venv
+env/
+venv/
+ENV/
+*.zip
+*.npy
