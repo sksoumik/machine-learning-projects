@@ -12,4 +12,5 @@ Source: https://en.wikipedia.org/wiki/Sign_language
 
 ---
 Source of the dataset: [Kaggle](https://www.kaggle.com/ardamavi/sign-language-digits-dataset) <br/>
-Collected from Turkey Ankara Ayrancı Anadolu High School's Sign Language Digits Dataset
+Collected from Turkey Ankara Ayrancı Anadolu High School's Sign Language Digits Dataset <br/>
+For processing the dataset, you can also see the this [github gist](https://gist.github.com/ardamavi/a7d06ff8a315308771c70006cf494d69)
