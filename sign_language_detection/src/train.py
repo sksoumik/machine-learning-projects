@@ -42,8 +42,8 @@ def train(epoch):
                         len(train_loader.dataset),
                         100. * (batch_idx + 1) / len(train_loader),
                         loss.item(), 100 * correct / total))
-            torch.save(model.state_dict(), './model.pth')
-            torch.save(model.state_dict(), './optimizer.pth')
+            torch.save(model.state_dict(), '../save/model.pth')
+            torch.save(model.state_dict(), '../save/optimizer.pth')
     train_loss.append(tr_loss / len(train_loader))
     train_accuracy.append(100 * correct / total)
     return train_loss, train_accuracy
