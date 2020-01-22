@@ -10,10 +10,8 @@ def read_files():
             print(os.path.join(dirname, filename))
 
 
-def load_data_and_fix_map(X, Y):
-    # print(X.shape[0], X.shape[1])
-    # print(y.shape[0], y.shape[1])
-    # print(X[0].shape)
+def load_data_and_fix_map():
+    X = np.load('../input\X.npy')
     Y = np.zeros(X.shape[0])
     Y[:204] = 9
     Y[204:409] = 0
@@ -31,13 +29,12 @@ def load_data_and_fix_map(X, Y):
                                                         random_state=2)
     print(f"shape of the train features {x_train.shape}")
     print(f"shape of the train target {y_train.shape}")
+    return x_train, x_test, y_train, y_test
 
 
 def main():
-    X = np.load('../input\X.npy')
-    y = np.load('../input\Y.npy')
     read_files()
-    load_data_and_fix_map(X, y)
+    load_data_and_fix_map()
 
 
 if __name__ == "__main__":
