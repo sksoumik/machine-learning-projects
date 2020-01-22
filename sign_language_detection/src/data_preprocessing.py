@@ -1,13 +1,11 @@
 import numpy as np
 import torch
-import torchvision
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
-from torch.utils.data import Dataset, DataLoader
 from data_load import load_data_and_fix_map
 
 
-class DatasetProcessing(Dataset):
+class DatasetProcessing:
     def __init__(self, data, target, transform=None):
         self.transform = transform
         self.data = data.reshape((-1, 64, 64)).astype(np.float32)[:, :, :,
@@ -54,7 +52,3 @@ def transform_data():
         plt.savefig('../static/' + 'datasample.png')
 
     return train_loader, test_loader
-
-
-if __name__ == "__main__":
-    transform_data()
