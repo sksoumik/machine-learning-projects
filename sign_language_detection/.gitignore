@@ -3,3 +3,5 @@
 /.ipynb_checkpoints
 .ipynb_checkpoints
 /save
+.ipynb_checkpoints
+__pycache__
