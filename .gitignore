@@ -1,0 +1,13 @@
+.ipynb_checkpoints
+.DS_Store
+code/datasets/movie/aclImdb_v1.tar.gz
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.h5
+*.hdf5
+*.pkl
+__pycache__/
+.cache
+mlruns/
+*.npy
