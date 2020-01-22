@@ -36,12 +36,12 @@ def transform_data():
     train_loader = torch.utils.data.DataLoader(dset_train,
                                                batch_size=4,
                                                shuffle=True,
-                                               num_workers=4)
+                                               num_workers=1)
     dset_test = DatasetProcessing(x_test, y_test, transform)
     test_loader = torch.utils.data.DataLoader(dset_test,
                                               batch_size=4,
                                               shuffle=True,
-                                              num_workers=4)
+                                              num_workers=1)
 
     plt.figure(figsize=(16, 4))
     for num, x in enumerate(x_train[0:6]):
