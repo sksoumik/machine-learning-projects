@@ -7,7 +7,6 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 from torchvision import models
-import torchvision
 
 
 def conv3x3(input, output):

@@ -100,3 +100,7 @@ def train(get_model, directory):
               (e, np.mean(train_loss), np.mean(val_loss)))
     # save the final model
     save_checkpoint('tgs-%i.pth' % epoch, model, optimizer)
+
+
+if __name__ == "__main__":
+    main()
