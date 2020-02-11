@@ -26,7 +26,7 @@ class Dataset(data.Dataset):
         mask_folder = os.path.join(self.root_path, "masks")
         mask_path = os.path.join(mask_folder, file_id + ".png")
 
-        image = load_image(image_path)
+        image = load_image(image_path)  # load_image():func <- data_preprocess.py
 
         if self.is_test:
             return (image, )

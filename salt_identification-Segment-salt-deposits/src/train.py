@@ -36,8 +36,8 @@ def main():
 
     checkpoint_path = "model_checkpoints"
     os.makedirs(checkpoint_path, exist_ok=True)
-
-    model = get_model()
+    
+    model = get_model()  # get_model() <- model.py
     optimizer = args.optm(model.parameters(), lr=args.lr)
     save_checkpoint(checkpoint_path, model, optimizer)
     load_checkpoint(checkpoint_path, model, optimizer)
@@ -61,10 +61,10 @@ def load_checkpoint(checkpoint_path, model, optimizer):
 
 
 def train(get_model, directory):
-    train_path, file_list = define_paths(directory)
+    train_path, file_list = define_paths(directory)  # define_paths(): func <- load_data.py
     file_list_val = file_list[::10]
     file_list_train = [f for f in file_list if f not in file_list_val]
-    dataset = Dataset(train_path, file_list_train)
+    dataset = Dataset(train_path, file_list_train)  # Dataset: class <- load_data.py
     dataset_val = Dataset(train_path, file_list_val)
 
     model = get_model
