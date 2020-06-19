@@ -19,7 +19,9 @@
 
 - #### [Pet Breed Classification Using CNN - fastai](https://github.com/sksoumik/machine-learning-projects/blob/master/pet_breed_classification_cnn_fastai/fastai_image_classification_pets.ipynb)
 
+- #### [Amazon review classification](https://github.com/sksoumik/machine-learning-projects/blob/master/amazon_review_classification_nlp.ipynb)
+
 
 ---
 
-Note: Most of the projects in this repository were done only for learning purposes following other ML experts/practitioners. Not all of the codes are mine. 
+Note: Most of the projects in this repository were done only for learning purposes following other ML experts/practitioners. Not all of the codes are mine as well. 
