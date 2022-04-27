@@ -11,3 +11,11 @@ __pycache__/
 .cache
 mlruns/
 *.npy
+
+# ignore excel, csv, and machine learning files
+.xlsx
+.csv
+.pkl
+.h5
+.hdf5
+.npy
