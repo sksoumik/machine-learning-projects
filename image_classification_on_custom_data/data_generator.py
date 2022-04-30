@@ -20,8 +20,14 @@ def load_data(data_dir):
     :return: The data_dir is being returned.
     """
     data_dir = pathlib.Path(data_dir)
-    image_count = len(list(data_dir.glob("*/*.jpg")))
-    print(image_count)
+    try:
+        # count the number of images in the directory
+        image_count = len(list(data_dir.glob("*/*.jpg")))
+        print("Found {} images.".format(image_count))
+    except:
+        raise Exception(
+            "No images found in {} or images are not in jpg format".format(data_dir)
+        )
     return data_dir
 
 

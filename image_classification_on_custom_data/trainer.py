@@ -7,75 +7,65 @@ import os
 import tensorflow as tf
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.metrics import plot_confusion_matrix
-
-# import f1 score from sklearn.metrics
 from sklearn.metrics import f1_score
 import argparse
 
 
 def main():
-
     parser = argparse.ArgumentParser()
     parser.add_argument(
-            "--data_path",
-            "-d",
-            type=str,
-            required=True,
-            help="Path of dataset",
-        )
-    
+        "--data_path",
+        "-d",
+        type=str,
+        required=True,
+        help="Path of dataset containing jpg format images",
+    )
+
     parser.add_argument(
-            "--epochs",
-            "-e",
-            type=int,
-            default=25,
-            help="Number of epochs to train"
-        )
-    
+        "--epochs", "-e", type=int, default=25, help="Number of epochs to train"
+    )
+
     parser.add_argument(
-            "--batch_size",
-            "-b",
-            type=int,
-            default=32,
-            help="batch size to train",
-        )
-    
+        "--batch_size",
+        "-b",
+        type=int,
+        default=32,
+        help="batch size to train",
+    )
+
     parser.add_argument(
-            "--img_height",
-            "-ih",
-            type=int,
-            default=224,
-            help="height of the image",
-        )
-    
+        "--img_height",
+        "-ih",
+        type=int,
+        default=224,
+        help="height of the image",
+    )
+
     parser.add_argument(
-            "--img_width",
-            "-iw",
-            type=int,
-            default=224,
-            help="width of the image",
-        )
-    
+        "--img_width",
+        "-iw",
+        type=int,
+        default=224,
+        help="width of the image",
+    )
+
     parser.add_argument(
-            "--validation_split",
-            "-vs",
-            type=float,
-            default=0.2,
-            help="validation split",
-        )
-    
+        "--validation_split",
+        "-vs",
+        type=float,
+        default=0.2,
+        help="validation split",
+    )
+
     parser.add_argument(
-            "--optimizer",
-            "-opt",
-            type=str,
-            default="adam",
-            help="Optimizer to use",
-        )
-    
+        "--optimizer",
+        "-opt",
+        type=str,
+        default="adam",
+        help="Optimizer to use",
+    )
 
     args = parser.parse_args()
-
-
     data_dir = args.data_path
     data_dir = load_data(data_dir)
 
@@ -84,13 +74,11 @@ def main():
     batch_size = args.batch_size
     img_height = args.img_height
     img_width = args.img_width
-    
     validation_split = args.validation_split
     optimizer = args.optimizer
-    
-
-    os.makedirs(f"../output/{epochs}", exist_ok=True)
     ### Hyperparameters ends   ##############
+
+    os.makedirs(f"output/{epochs}", exist_ok=True)
 
     train_ds, val_ds = create_dataset(
         data_dir, batch_size, img_height, img_width, validation_split
@@ -110,7 +98,6 @@ def main():
     print(num_classes)
 
     data_augmentation = fn_data_augmentation(img_height, img_width)
-
     model = create_model(num_classes, data_augmentation)
 
     model.compile(
@@ -125,7 +112,7 @@ def main():
     visualize_training(history, epochs)
 
     # # predict new images
-    # new_img_path = "../train_data/beverage/缶/3179730110789.jpg"
+    # new_img_path = "test_images/image_name.jpg"
     # predict_new_images(model, class_names, new_img_path, img_height, img_width)
 
     # evaluate the model on validation data
@@ -152,7 +139,7 @@ def main():
     print(f1_score(y_true, y_pred, average="macro"))
 
     # save the classification report in a file
-    with open(f"../output/{epochs}/classification_report_{epochs}.txt", "w") as f:
+    with open(f"output/{epochs}/classification_report_{epochs}.txt", "w") as f:
         f.write(classification_report(y_true, y_pred, target_names=class_names))
         # append f1 score
         f.write(f"\n\n\nF1 score (macro): {f1_score(y_true, y_pred, average='macro')}")

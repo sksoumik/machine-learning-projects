@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import itertools
-
 import matplotlib.font_manager as fm
 
 fprop = fm.FontProperties(fname="../jp_font/NotoSansJP-Regular.otf")
@@ -31,7 +30,7 @@ def visualize_training(history, epochs):
     plt.title("Training and Validation Loss")
     # plt.show()
     # save the plot
-    plt.savefig(f"../output/{epochs}/train_valid_graph.png")
+    plt.savefig(f"output/{epochs}/train_valid_graph.png")
     # close the plot
     plt.close()
 
@@ -73,8 +72,7 @@ def fn_plot_confusion_matrix(
     plt.tight_layout()
     plt.ylabel("True label", fontproperties=fprop)
     plt.xlabel("Predicted label", fontproperties=fprop)
-
     # save the plot
-    plt.savefig(f"../output/{epochs}/confusion_matrix.png")
+    plt.savefig(f"output/{epochs}/confusion_matrix.png")
     # close the plot
     plt.close()
