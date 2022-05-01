@@ -22,6 +22,3 @@
 - #### [Amazon review classification](https://github.com/sksoumik/machine-learning-projects/blob/master/amazon_review_classification_nlp.ipynb)
 
 
----
-
-Note: Most of the projects in this repository were done only for learning purposes following other ML experts/practitioners. Not all of the codes are mine as well. 
